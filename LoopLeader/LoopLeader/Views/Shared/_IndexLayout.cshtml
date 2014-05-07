@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/styles.css")" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <h1><span style="color:darkgray">The Loop<br />Leader</span></h1>
+        <nav class="memberNav">
+            <ul>
+                <li>@Html.ActionLink("viewcart (0)", "/", "/")</li>
+                <li>@Html.ActionLink("Log In", "Login", "Account")</li>
+                <li>@Html.ActionLink("create account", "AddMember", "Account")</li>
+                <li>@Html.ActionLink("WELCOME GUEST!", "/", "/")</li>
+            </ul>
+        </nav>
+        <nav class="horizontalNav">
+            <ul>
+                <li>@Html.ActionLink("Contact", "/", "Contact")</li>
+                <li>@Html.ActionLink("About Us", "About Us", "Home")</li>
+                <li>@Html.ActionLink("Order", "Order", "Home")</li>
+                <li>@Html.ActionLink("Information", "Information", "Home")</li>
+                <li>@Html.ActionLink("Home", "/", "Home")</li>
+            </ul>
+        </nav>
+    </header>
+    <br />
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <nav class="footerNav">
+            <ul>
+                <li>@Html.ActionLink("©2014", "/", "Home")</li>
+                <li>@Html.ActionLink("Sitemap", "/", "Home")</li>
+                <li>@Html.ActionLink("Legal", "/", "Home")</li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿@model LoopLeader.Domain.Entities.Member
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_IndexLayout.cshtml";
+}
+
+<h2>Register</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <p>New users need to register below in order to Login</p>
+    <p>Username:<br /> @Html.TextBoxFor(x => x.LoginName)</p>
+    <p>First Name:<br /> @Html.TextBoxFor(x => x.FirstName)</p>
+    <p>Last Name:<br /> @Html.TextBoxFor(x => x.LastName)</p>
+    <p>Email Address:<br /> @Html.TextBoxFor(x => x.Email)</p>
+    <p>Address1:<br /> @Html.TextBoxFor(x => x.StreetAddress1)</p>
+    <p>Address2:<br /> @Html.TextBoxFor(x => x.StreetAddress2)</p>
+    <p>City:<br /> @Html.TextBoxFor(x => x.City)</p>
+    <p>State:<br /> @Html.TextBoxFor(x => x.State)</p>
+    <p>Zip Code:<br /> @Html.TextBoxFor(x => x.Zip)</p>
+    <p>Password:<br /> @Html.PasswordFor(x => x.Password)</p>
+    <input type="Submit" value="Register" class="submit" />
+}
