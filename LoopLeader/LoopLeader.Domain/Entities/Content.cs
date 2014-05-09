@@ -19,16 +19,10 @@ namespace LoopLeader.Domain.Entities
         public string NewText { get; set; }
 
         //The function to do the updating
-        public void UpdateSection(/*string contentID, string newSectionInfo*/)
+        public void UpdateSection()
         {
-            //Commented out for testing!  Please uncomment the next two lines later for the real DB.
-            //ContentRepository contentRepo = new ContentRepository();
-            //contentRepo.SaveContent(this);
-
-
-            FakeContentRepo contentRepo = new FakeContentRepo();
-
-            contentRepo.SaveContent(this, contentRepo);
+            ContentRepository contentRepo = new ContentRepository();
+            contentRepo.SaveContent(this);
 
             /*Psuedo-code for possible update method:
              Get Section to Update (passed in as function parameter above)
