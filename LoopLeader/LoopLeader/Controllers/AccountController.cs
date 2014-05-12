@@ -49,5 +49,17 @@ namespace LoopLeader.Controllers
             return View("AddMember", member);
         }
 
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult Login(Member member)
+        {
+
+            return View("Login", member);
+        }
     }
 }

@@ -42,5 +42,11 @@ namespace LoopLeader.Domain.Concrete
         {
             throw new NotImplementedException();
         }
+
+
+        public Member GetMemberbyLoginNameAndPassword(Member member)
+        {
+            return members.Where(m => m.LoginName == member.LoginName & m.Password == member.Password).FirstOrDefault();
+        }
     }
 }

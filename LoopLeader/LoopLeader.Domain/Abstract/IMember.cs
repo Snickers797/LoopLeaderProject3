@@ -14,5 +14,6 @@ namespace LoopLeader.Domain.Abstract
         Member GetMemberbyLoginName(string loginName);
         void SaveMember(Member member);
         Member DeleteMember(int memberId);
+        Member GetMemberbyLoginNameAndPassword(Member member);
     }
 }

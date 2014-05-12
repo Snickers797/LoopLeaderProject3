@@ -71,5 +71,11 @@ namespace LoopLeader.Domain.Concrete
             }
             return dbEntry;
         }
+
+        public Member GetMemberbyLoginNameAndPassword(Member member)
+        {
+            var db = new LLDbContext();
+            return db.Members.Where(m => m.LoginName == member.LoginName & m.Password == member.Password).FirstOrDefault();
+        }
     }
 }

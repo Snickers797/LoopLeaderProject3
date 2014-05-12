@@ -53,5 +53,7 @@ namespace LoopLeader.Domain.Entities
 
         [StringLength(20, ErrorMessage = "Must be less than 20 characters")]
         public string Zip { get; set; }
+
+        public bool IsAdmin { get; set; }
     }
 }
