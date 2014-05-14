@@ -62,11 +62,28 @@
     <Compile Include="Entities\Content.cs" />
     <Compile Include="Entities\Member.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Migrations\201405072019165_InitialCreate.cs" />
+    <Compile Include="Migrations\201405072019165_InitialCreate.Designer.cs">
+      <DependentUpon>201405072019165_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405142244575_Update.cs" />
+    <Compile Include="Migrations\201405142244575_Update.Designer.cs">
+      <DependentUpon>201405142244575_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201405072019165_InitialCreate.resx">
+      <DependentUpon>201405072019165_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405142244575_Update.resx">
+      <DependentUpon>201405142244575_Update.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
