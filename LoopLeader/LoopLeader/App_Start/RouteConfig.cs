@@ -26,6 +26,25 @@ namespace LoopLeader
                 );
 
             routes.MapRoute(
+                name: "ProductAdminstration",
+                url: "Admin/Products",
+                defaults: new { controller = "Admin", action = "ProductIndex" }
+            );
+
+            routes.MapRoute(
+                name: "MemberAdminstration",
+                url: "Admin/Members",
+                defaults: new { controller = "Admin", action = "MemberIndex" }
+            );
+
+            routes.MapRoute(
+                name: "ContentAdminstration",
+                url: "Admin/Content",
+                defaults: new { controller = "Admin", action = "ContentIndex" }
+            );
+
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

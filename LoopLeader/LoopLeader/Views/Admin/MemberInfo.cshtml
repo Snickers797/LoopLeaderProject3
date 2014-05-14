@@ -1,0 +1,28 @@
+﻿@model LoopLeader.Domain.Entities.Member
+
+@{
+    ViewBag.Title = "Member Info";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+<h2>Member Info</h2>
+@Model.LoginName
+<br />
+@Model.LastName
+<br />
+@Model.FirstName
+<br />
+@Model.Email
+<br />
+@Model.StreetAddress1
+<br />
+@Model.StreetAddress2
+<br />
+@Model.City
+<br />
+@Model.State
+<br />
+@Model.Zip
+<br />
+
+@Html.ActionLink("Done", "Index", "Admin")

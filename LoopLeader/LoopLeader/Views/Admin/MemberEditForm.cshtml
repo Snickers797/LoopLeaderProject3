@@ -1,0 +1,18 @@
+﻿@model LoopLeader.Domain.Entities.Member
+
+@{
+    ViewBag.Title = "Member: Edit";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+<h2>Member Edit</h2>
+
+Member selected:<br />
+@Model.LoginName <br />
+
+@using (Html.BeginForm("MemberInfo", "Admin", Model))
+{
+    @Html.EditorForModel();
+
+    <input type="submit" value="Save" />
+}

@@ -139,8 +139,10 @@
     <Compile Include="HtmlHelpers\PagingHelpers.cs" />
     <Compile Include="Models\ContentViewModel.cs" />
     <Compile Include="Models\MemberListViewModel.cs" />
+    <Compile Include="Models\MemberViewModel.cs" />
     <Compile Include="Models\PagingInfo.cs" />
     <Compile Include="Models\ProductListViewModel.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -237,6 +239,13 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\ContentEditForm.cshtml" />
     <Content Include="Views\Admin\ContentInfo.cshtml" />
+    <Content Include="Views\Admin\ContentIndex.cshtml" />
+    <Content Include="Views\Admin\MemberEditForm.cshtml" />
+    <Content Include="Views\Admin\MemberIndex.cshtml" />
+    <Content Include="Views\Admin\MemberInfo.cshtml" />
+    <Content Include="Views\Admin\ProductEditForm.cshtml" />
+    <Content Include="Views\Admin\ProductIndex.cshtml" />
+    <Content Include="Views\Admin\ProductInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LoopLeader.Domain.Abstract;
 using LoopLeader.Domain.Concrete;
+using System.Web.Mvc;
 
 namespace LoopLeader.Domain.Entities
 {
@@ -14,9 +15,12 @@ namespace LoopLeader.Domain.Entities
            entry in the database where the content is stored, not the page itself.*/
         public string ContentID { get; set; }
         //Obtain the current text in the section if we need it (maybe to automatically fill in an editable text box later for easy edits?)
+        [AllowHtml]
         public string CurrentText { get; set; }
         //The new text that we want the section to have.
-        public string NewText { get; set; }
+        string newText;
+        [AllowHtml]
+        public string NewText { get { return newText; } set { newText = value; } }
 
         //The function to do the updating
         public void UpdateSection()

@@ -5,7 +5,7 @@
 }
 
 <h2>Content Info for @Model.ContentID </h2>
-@Model.CurrentText
+@Html.Raw(@Model.CurrentText)
 <br />
 <br />
 @Html.ActionLink("Done", "Index", "Admin")
