@@ -50,6 +50,7 @@
     <Compile Include="Abstract\IAdministrator.cs" />
     <Compile Include="Abstract\IContent.cs" />
     <Compile Include="Abstract\IMember.cs" />
+    <Compile Include="Abstract\IOrderProcessor.cs" />
     <Compile Include="Abstract\IProductRepository.cs" />
     <Compile Include="Concrete\ContentRepository.cs" />
     <Compile Include="Concrete\FakeContentRepo.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Concrete\MemberRepository.cs" />
     <Compile Include="Concrete\ProductRepository.cs" />
     <Compile Include="Entities\Administrator.cs" />
+    <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\Content.cs" />
     <Compile Include="Entities\Member.cs" />
     <Compile Include="Entities\Product.cs" />
@@ -71,6 +73,7 @@
       <DependentUpon>201405142244575_Update.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Entities\ShippingDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
