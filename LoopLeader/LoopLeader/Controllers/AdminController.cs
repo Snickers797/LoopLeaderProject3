@@ -20,6 +20,7 @@ namespace LoopLeader.Controllers
         public ActionResult ContentIndex()
         {
             //Get a list of content to populate a drop down list.
+            LLDbContext context = new LLDbContext();
             ContentRepository repo = new ContentRepository();
             ContentViewModel contentList = new ContentViewModel() { ContentList = repo.Content.ToList<Content>() };
             return View(contentList);
