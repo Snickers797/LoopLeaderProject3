@@ -96,11 +96,12 @@ namespace LoopLeader.Controllers
         public ViewResult MemberInfo(Member formMember)
         {
             MemberRepository repo = new MemberRepository();
+            LLDbContext memberDB = new LLDbContext();
             //After we get the information back from the form...
             if (ModelState.IsValid)
             {
                 //...update the database with it.
-                LLDbContext memberDB = new LLDbContext();
+
                 Member memberToUpdate = memberDB.Members.Find(formMember.MemberId);
                 if (memberToUpdate != null)
                 {
@@ -108,12 +109,14 @@ namespace LoopLeader.Controllers
                     memberToUpdate.FirstName = formMember.FirstName;
                     memberToUpdate.LastName = formMember.LastName;
                     memberToUpdate.Password = formMember.Password;
-
+                    memberToUpdate.Email = formMember.Email;
                     memberToUpdate.StreetAddress1 = formMember.StreetAddress1;
                     memberToUpdate.StreetAddress2 = formMember.StreetAddress2;
                     memberToUpdate.City = formMember.City;
                     memberToUpdate.State = formMember.State;
                     memberToUpdate.Zip = formMember.Zip;
+                    memberToUpdate.IsAdmin = formMember.IsAdmin;
+                    
                 }
                 memberDB.SaveChanges();
             }
@@ -122,6 +125,19 @@ namespace LoopLeader.Controllers
             return View((from m in repo.GetMembers
                          where m.MemberId == formMember.MemberId
                          select m).FirstOrDefault<Member>());
+        }
+
+        public ViewResult MemberDelete(Member memberToBeDeleted)
+        {
+            return View(memberToBeDeleted);
+        }
+
+        public ActionResult MemberDeleteConfirmed(Member memberToBeDeleted)
+        {
+            MemberRepository repo = new MemberRepository();
+            //First check that the
+            repo.DeleteMember(memberToBeDeleted.MemberId);
+            return View(memberToBeDeleted);
         }
 
         //END MEMBER PAGES

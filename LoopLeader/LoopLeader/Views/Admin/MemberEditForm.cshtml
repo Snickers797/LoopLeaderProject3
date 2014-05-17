@@ -16,3 +16,8 @@ Member selected:<br />
 
     <input type="submit" value="Save" />
 }
+
+@using (Html.BeginForm("MemberDelete", "Admin", Model))
+{
+    <br /><input type="submit" value="Delete this Member" />
+}
