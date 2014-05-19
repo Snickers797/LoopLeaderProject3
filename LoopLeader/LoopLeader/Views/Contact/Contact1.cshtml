@@ -23,6 +23,11 @@
         @using (Html.BeginForm())
         {
             @Html.ValidationSummary()
+            <table style="width:100%;">
+            <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+            </table>
             <p>Your first name: @Html.TextBoxFor(x => x.FirstName) </p>
             <p>Your last name: @Html.TextBoxFor(x => x.LastName) </p>
             <p>Your email: @Html.TextBoxFor(x => x.Email)</p>
