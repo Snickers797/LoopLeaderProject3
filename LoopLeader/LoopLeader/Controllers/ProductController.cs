@@ -6,7 +6,6 @@ using System.Web.Mvc;
 using LoopLeader.Domain.Entities;
 using LoopLeader.Domain.Abstract;
 using LoopLeader.Domain.Concrete;
-//using LoopLeader.WebUI.Models;
 using LoopLeader.Models;
 
 namespace LoopLeader.Controllers
