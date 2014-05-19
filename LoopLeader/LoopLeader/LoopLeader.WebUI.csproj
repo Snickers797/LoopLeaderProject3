@@ -255,8 +255,10 @@
     <Content Include="Views\Admin\MemberDelete.cshtml" />
     <Content Include="Views\Admin\MemberDeleteConfirmed.cshtml" />
     <Content Include="Views\Shared\_MasterLayout.cshtml" />
-    <Content Include="Views\Contact\Contact.cshtml" />
+    <Content Include="Views\Contact\Contact1.cshtml" />
     <Content Include="Views\Contact\Thankyou.cshtml" />
+    <Content Include="Views\Product\List.cshtml" />
+    <Content Include="Views\Shared\ProductSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
