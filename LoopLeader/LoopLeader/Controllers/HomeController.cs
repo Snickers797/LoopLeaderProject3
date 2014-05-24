@@ -17,7 +17,11 @@ namespace LoopLeader.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            ContentRepository repo = new ContentRepository();
+            Content homeContent = (from hc in repo.Content
+                                   where hc.ContentID == "Home"
+                                   select hc).FirstOrDefault<Content>();
+            return View(homeContent);
         }
 
         

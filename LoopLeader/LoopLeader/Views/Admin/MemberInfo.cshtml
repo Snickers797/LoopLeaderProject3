@@ -6,23 +6,32 @@
 }
 
 <h2>Member Info</h2>
-@Model.LoginName
+<h3>Login Name: </h3> @Model.LoginName
 <br />
-@Model.LastName
-<br />
+<h3>First Name: </h3>
 @Model.FirstName
 <br />
+<h3>Last Name: </h3>
+@Model.LastName
+<br />
+<h3>Email: </h3>
 @Model.Email
 <br />
+<h3>Address Line 1: </h3>
 @Model.StreetAddress1
 <br />
+<h3>Address Line 2: </h3>
 @Model.StreetAddress2
 <br />
+<h3>City: </h3>
 @Model.City
 <br />
+<h3>State: </h3>
 @Model.State
 <br />
+<h3>ZIP: </h3>
 @Model.Zip
 <br />
 
+<br />
 @Html.ActionLink("Done", "Index", "Admin")

@@ -1,6 +1,11 @@
-﻿@{
+﻿@model LoopLeader.Domain.Entities.Content
+
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_IndexLayout.cshtml";
 }
 
-<h2>Content</h2>
+@if (Model != null)
+{ 
+    <h2>@Html.Raw(@Model.CurrentText)</h2>
+}
